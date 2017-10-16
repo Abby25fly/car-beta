@@ -96,6 +96,10 @@ class Parts extends Component {
             </div>
           </div>
         </div>
+        <div className='row'>
+          <button className='btn btn-success btn-block'>Siguiente</button>
+        </div>
+        <br/>
       </div>
     );
   }
