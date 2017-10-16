@@ -32,15 +32,15 @@ class Parts extends Component {
       this.state.bonnet === ''?this.setState({bonnet:'selected'}):this.setState({bonnet:''})
     if(e.target.textContent ==='Parabrisas')
       this.state.ws === ''?this.setState({ws:'selected'}):this.setState({ws:''})
-    if(e.target.textContent ==='Puerta Delantera Izquierda')
+    if(e.target.textContent ==='P. Delantera Izquierda')
       this.state.fdl === ''?this.setState({fdl:'selected'}):this.setState({fdl:''})
-    if(e.target.textContent ==='Puerta Delantera Derecha')
+    if(e.target.textContent ==='P. Delantera Derecha')
       this.state.fdr === ''?this.setState({fdr:'selected'}):this.setState({fdr:''})
     if(e.target.textContent ==='Techo')
       this.state.roof === ''?this.setState({roof:'selected'}):this.setState({roof:''})
-    if(e.target.textContent ==='Puerta Trasera Izquierda')
+    if(e.target.textContent ==='P. Trasera Izquierda')
       this.state.bdl === ''?this.setState({bdl:'selected'}):this.setState({bdl:''})
-    if(e.target.textContent ==='Puerta Trasera Derecha')
+    if(e.target.textContent ==='P. Trasera Derecha')
       this.state.bdr === ''?this.setState({bdr:'selected'}):this.setState({bdr:''})
     if(e.target.textContent ==='Ventana Trasera')
       this.state.rw === ''?this.setState({rw:'selected'}):this.setState({rw:''})
@@ -75,17 +75,17 @@ class Parts extends Component {
             </div>
             <br/>
             <div className='two col-md-12'>
-              <div className={'box '+this.state.fdl} onClick={(e)=>this.select(e)}>Puerta Delantera Izquierda</div>
-              <div className={'box '+this.state.fdr} onClick={(e)=>this.select(e)}>Puerta Delantera Derecha</div>
+              <div className={'box '+this.state.fdl} onClick={(e)=>this.select(e)}>P. Delantera Izquierda</div>
+              <div className={'box '+this.state.fdr} onClick={(e)=>this.select(e)}>P. Delantera Derecha</div>
             </div>
             <div className='one col-md-12'>
               <div className={'box '+this.state.roof} onClick={(e)=>this.select(e)}>Techo</div>
             </div>
             <div className='two col-md-12'>
-              <div className={'box '+this.state.bdl} onClick={(e)=>this.select(e)}>Puerta Trasera Izquierda</div>
-              <div className={'box '+this.state.bdr} onClick={(e)=>this.select(e)}>Puerta Trasera Derecha</div>
+              <div className={'box '+this.state.bdl} onClick={(e)=>this.select(e)}>P. Trasera Izquierda</div>
+              <div className={'box '+this.state.bdr} onClick={(e)=>this.select(e)}>P. Trasera Derecha</div>
             </div>
-            <br/>
+            <br/><br/>
             <div className='one col-md-12'>
               <div className={'box '+this.state.rw} onClick={(e)=>this.select(e)}>Ventana Trasera</div>
             </div>
