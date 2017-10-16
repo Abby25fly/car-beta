@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import './Result.css';
 const Result = () => (
@@ -32,7 +33,6 @@ const BtnNext = ()=>(
   </div>
 
 );
-
 
 
 
