@@ -20,13 +20,13 @@
     color:white;
     font-size: 25px;
   font-weight: bold;
-  background-color: #4f5967;
+  background-color: #4BCAA4;
   }
 .Homebtn:hover{
-  background:-webkit-linear-gradient(left, #4BCAA4,#4f5967);
-    border: transparent;
+  border: #4f5967;
+  color: white;
   }
-  
+
 
 .autocomplete {
   position: absolute;
