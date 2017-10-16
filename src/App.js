@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Parts from './Parts';
+import SignUp from './SignUp';
 import SignUpCar from './SignUpCar';
 import SignUpUser from './SignUpUser';
 import {
@@ -8,11 +9,8 @@ import {
 	Switch,
 	NavLink,
 	Redirect
-} from 'react-router-dom'
-import './App.css';
-
+} from 'react-router-dom';
 import Home from './Home';
-import SignUp from './SignUp';
 
 
 const NotFound = (props) => {
@@ -33,11 +31,13 @@ const App = (props) => {
 				       render={() => <Redirect to= {'/home'}/>}/>
 				<Route  path="/home" render={() => <Home model={model} />}/>
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
-			
+				<Route  path="/signupCar" render={() => <SignUpCar model={model} />}/>
+				<Route  path="/signupUser" render={() => <SignUpUser model={model} />}/>
+				<Route  path="/showParts" render={() => <Parts model={model} />}/>
+				<Route  path="/camera" render={() => <Parts model={model} />}/>
 				<Route component={NotFound}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
-
-
+}
 export default App;

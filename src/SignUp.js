@@ -62,15 +62,21 @@ class SignUpForm extends Component {
 		return (
 			<div>
 				<section className="container-fluid form text-center">
-					<header>
-						<div className="btnBack">
-							<NavLink to="/signup-validation">
-								<i className="material-icons back">keyboard_arrow_left</i>
-							</NavLink>
+						<header>
+						<div className="container">
+						<div className="row">
+							<div className="col-md-1 col-xs-1 text-center">
+							<a href="javascript:window.history.back();">
+								<i
+								className="fa fa-chevron-left arrow"
+								aria-hidden="true" />
+							</a>
+							</div>
+							<div className="col-md-10 col-xs-10 text-center">
+							<h1>Iniciar sesión</h1>
+							</div>
 						</div>
-						<h1 className="text-center">Iniciar sesión</h1>
-
-						<hr />
+						</div>
 					</header>
 					<form
 						className="form-horizontal">
@@ -80,7 +86,6 @@ class SignUpForm extends Component {
 							</span>
 							<input
 								value={this.inputName}
-								title="Coloca tu nombre"
 								type="text"
 								className="form-control"
 								name="name"
@@ -94,7 +99,6 @@ class SignUpForm extends Component {
 								<i className="glyphicon glyphicon-envelope" />
 							</span>
 							<input
-								title="Coloca tu e-mail"
 								type="email"
 								className="form-control"
 								name="email"
@@ -103,12 +107,11 @@ class SignUpForm extends Component {
 							/>
 						</div>
 						<br />
-						<div class="input-group">
+						<div className="input-group">
 							<span className="input-group-addon">
-							<i class="fa fa-unlock" aria-hidden="true"></i>
+							<i className="fa fa-unlock" aria-hidden="true"></i>
 							</span>
-							<label for="exampleInputPassword1"></label>
-							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+							<input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
 						</div>
 						<div />
 						<br />

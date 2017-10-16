@@ -149,10 +149,8 @@ class SignUpCar extends Component {
                   {
                     this.state.completed ?
                       <NavLink to={"./SignUpUser"}
-
                           className="btn btn-lg btn-block next">
                           Next
-
                       </NavLink>
                       :
                       <button
