@@ -1,4 +1,5 @@
-
+import React, { Component } from "react";
+import './Result.css';
 const Result = () => (
     <div className="container">
       <div className="[ col-sm-6 ]">
