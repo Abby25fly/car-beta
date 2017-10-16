@@ -6,7 +6,7 @@
 }*/
 
 .btn-battle{
-    background-color: #040404;
+    background-color: #4BCAA4;
     color:white;
     border-radius: none;
     margin: 0 auto;
@@ -27,7 +27,18 @@
   opacity: 0.8;
 }
 .selected{
-  border: 3px solid #56CDA9;
+  border: 3px solid #4BCAA4;
   opacity: 1;
   box-sizing: border-box;
+}
+
+.add{
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid #4BCAA4;
+  padding: 5px;
+}
+
+a{
+  color: #4BCAA4;
 }
