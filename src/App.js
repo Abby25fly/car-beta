@@ -3,13 +3,15 @@ import './App.css';
 import Parts from './Parts';
 import SignUpCar from './SignUpCar';
 import SignUpUser from './SignUpUser';
+import Map from './Map';
 
-class App extends Component {
-  render() {
-    return (
-      <SignUpUser/>
-    );
-  }
+const App = (props) => {
+	const {model} =  props;
+	console.log('app.props', props)
+	return (
+    <Map model={model} />
+  )
 }
 
 export default App;
+
