@@ -16,7 +16,18 @@
     box-sizing: border-box;
   }
 
-  img:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+/**/
+
+.image{
+  background-color: white;
+  border:3px solid #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+.selected{
+  border: 3px solid #56CDA9;
+  opacity: 1;
+  box-sizing: border-box;
 }
