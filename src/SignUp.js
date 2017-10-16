@@ -5,13 +5,23 @@ import {
 	Switch,
 	NavLink,
 	Redirect
+	
 } from "react-router-dom";
 
-import Utils from "./Utils.js";
-class SignUpForm extends Component {
+import { 
+FacebookLogin 
+} from 'react-facebook-login-component';
+ 
 
-	constructor(props) {
-		super(props);
+import Utils from "./Utils.js";
+
+
+
+
+class SignUp extends Component {
+
+	constructor(props,context) {
+		super(props,context);
 		this.inputName = undefined;
 		this.inputEmail = undefined;
 		this.inputpassword = undefined;
@@ -20,7 +30,11 @@ class SignUpForm extends Component {
 			complete: false
 		};
 	}
-	formsName(e) {
+	responseFacebook (response) {
+		console.log(response);
+		//anything else you want to do(save to localStorage)... 
+	  } 
+		formsName(e) {
 		this.inputName = e.target.value;
 
 		// let patron = /[^a-zA-Z -]|( )|(--)|(^s*$)/;
@@ -123,6 +137,8 @@ class SignUpForm extends Component {
 							<br />
 						<a href="lyft.com"> Terminos & Servicios</a>
 						</label>
+						
+		 <br />
 						{this.state.goFordward ? (
 							<NavLink
 								onClick={prueba}
@@ -137,9 +153,25 @@ class SignUpForm extends Component {
               </button>
 							)}
 					</form>
+					<div>
+		   <FacebookLogin socialId="732068980315428"
+						  language="en_US"
+						  scope="public_profile,email"
+						  responseHandler={this.responseFacebook}
+						  xfbml={true}
+						  fields="id,email,name"
+						  version="v2.5"
+						  className="facebook-login"
+						  buttonText="Login With Facebook"/>
+		 </div>
 				</section>
 			</div>
 		);
 	}
 }
-export default SignUpForm;
+export default SignUp;
+
+	
+	
+	
+	
