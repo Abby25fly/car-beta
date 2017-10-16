@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import {NavLink} from "react-router-dom";
 
 class Parts extends Component {
   constructor(props){
@@ -97,7 +98,9 @@ class Parts extends Component {
           </div>
         </div>
         <div className='row'>
-          <button className='btn btn-success btn-block'>Siguiente</button>
+          <div className="col-xs-12">
+            <NavLink to={"/camera"} className='btn btn-block'>Siguiente</NavLink>
+          </div>
         </div>
         <br/>
       </div>

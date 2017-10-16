@@ -36,3 +36,10 @@
   display: flex;
   justify-content: space-between;
 }
+.btn{
+  background-color: #56CDA9;
+  color:white;
+}
+.btn:hover{
+  color:white;
+}
