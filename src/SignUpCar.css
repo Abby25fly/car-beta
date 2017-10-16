@@ -1,0 +1,56 @@
+.arrow{
+    padding-top: 30px;
+    padding-right: 20px;
+    }
+
+    h1{
+        font-weight: bolder;
+        color:#4BCAA4;
+      }
+      
+      h4{
+        font-weight: bolder;
+        padding-bottom: 10px;
+      }
+
+    .form-group{
+    width: 130px;
+    }
+
+    span
+    {
+    position: absolute;
+    z-index: 100;
+    left: 64px;
+    top:7px;
+    }
+
+    #telNumber
+    {
+    padding-left: 42px !important;
+    position: relative;
+    }
+
+    .next{
+        border:white 3px solid;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: #4f5967;
+        }
+        .next:hover{
+        background:-webkit-linear-gradient(left, #4BCAA4,#4f5967);
+        border: transparent;
+        color: white;
+        }
+        .btn-next{
+        position: absolute;
+        bottom: 30px;
+        padding:80px 20px;
+        padding-bottom: 0;
+        width: 100%;
+        text-decoration: none;
+        }

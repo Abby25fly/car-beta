@@ -11,10 +11,11 @@ import {
 import { 
 FacebookLogin 
 } from 'react-facebook-login-component';
- 
+import { GoogleLogin } from 'react-google-login-component';
 
 import Utils from "./Utils.js";
 
+import "./SignUp.css"
 
 
 
@@ -34,6 +35,12 @@ class SignUp extends Component {
 		console.log(response);
 		//anything else you want to do(save to localStorage)... 
 	  } 
+	  responseGoogle (googleUser) {
+		var id_token = googleUser.getAuthResponse().id_token;
+		console.log({accessToken: id_token});
+		//anything else you want to do(save to localStorage)...
+	  }
+	
 		formsName(e) {
 		this.inputName = e.target.value;
 
@@ -76,15 +83,21 @@ class SignUp extends Component {
 		return (
 			<div>
 				<section className="container-fluid form text-center">
-					<header>
-						<div className="btnBack">
-							<NavLink to="/signup-validation">
-								<i className="material-icons back">keyboard_arrow_left</i>
-							</NavLink>
+						<header>
+						<div className="container">
+						<div className="row">
+							<div className="col-md-1 col-xs-1 text-center">
+							<a href="javascript:window.history.back();">
+								<i
+								className="fa fa-chevron-left arrow"
+								aria-hidden="true" />
+							</a>
+							</div>
+							<div className="col-md-10 col-xs-10 text-center">
+							<h1>Iniciar sesión</h1>
+							</div>
 						</div>
-						<h1 className="text-center">Iniciar sesión</h1>
-
-						<hr />
+						</div>
 					</header>
 					<form
 						className="form-horizontal">
@@ -94,7 +107,6 @@ class SignUp extends Component {
 							</span>
 							<input
 								value={this.inputName}
-								title="Coloca tu nombre"
 								type="text"
 								className="form-control"
 								name="name"
@@ -108,7 +120,6 @@ class SignUp extends Component {
 								<i className="glyphicon glyphicon-envelope" />
 							</span>
 							<input
-								title="Coloca tu e-mail"
 								type="email"
 								className="form-control"
 								name="email"
@@ -117,12 +128,11 @@ class SignUp extends Component {
 							/>
 						</div>
 						<br />
-						<div class="input-group">
+						<div className="input-group">
 							<span className="input-group-addon">
-							<i class="fa fa-unlock" aria-hidden="true"></i>
+							<i className="fa fa-unlock" aria-hidden="true"></i>
 							</span>
-							<label for="exampleInputPassword1"></label>
-							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+							<input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
 						</div>
 						<div />
 						<br />
@@ -153,6 +163,7 @@ class SignUp extends Component {
               </button>
 							)}
 					</form>
+					
 					<div>
 		   <FacebookLogin socialId="732068980315428"
 						  language="en_US"
@@ -161,9 +172,20 @@ class SignUp extends Component {
 						  xfbml={true}
 						  fields="id,email,name"
 						  version="v2.5"
-						  className="facebook-login"
-						  buttonText="Login With Facebook"/>
+						  className="facebook-login fa fa-facebook "
+						  buttonText=""/>
 		 </div>
+		 <br />
+		 <div>
+        <GoogleLogin socialId="485307064541-svc54uido59qvkvatniict2iifutrpqr.apps.googleusercontent.com"
+		
+					 className="google-login fa fa-google-plus "
+                     scope="profile"
+                     fetchBasicProfile={false}
+                     responseHandler={this.responseGoogle}
+					 buttonText=""
+                     />
+      </div>
 				</section>
 			</div>
 		);

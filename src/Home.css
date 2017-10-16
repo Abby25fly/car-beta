@@ -4,11 +4,12 @@
     background-position-y: 23%;
     background-repeat: no-repeat;
     height: 500px;
-    
+    height: 100vh;
+
 }
 
 .logo{
-    width: 170px;
+    width: 100vh;
     left:30%;
 }
 
