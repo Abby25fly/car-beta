@@ -1,0 +1,22 @@
+/*header .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 35% auto -4% auto;
+}*/
+
+.btn-battle{
+    background-color: #040404;
+    color:white;
+    border-radius: none;
+    margin: 0 auto;
+  }
+
+  body{
+    box-sizing: border-box;
+  }
+
+  img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
