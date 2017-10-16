@@ -97,7 +97,7 @@ class Images extends Component {
           <textarea className="form-control" rows="5" id="comment"></textarea>
         </div>
         <div>
-          <NavLink to={"/BattleUsers"}	className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
+          <NavLink to={"/"}	className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
         </div>
       </div>
     );
