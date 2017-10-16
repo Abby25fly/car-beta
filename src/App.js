@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import Parts from './Parts';
+import SignUpCar from './SignUpCar';
+import SignUpUser from './SignUpUser';
 import {
 	BrowserRouter,
 	Route,
@@ -35,6 +38,6 @@ const App = (props) => {
 			</Switch>
 		</div>
 	</BrowserRouter>)
-}
+
 
 export default App;
