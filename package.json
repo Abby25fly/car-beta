@@ -11,7 +11,8 @@
     "react-google-login-component": "^0.9.1",
     "react-google-maps": "^8.5.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "react-webcam": "^0.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
