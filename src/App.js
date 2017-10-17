@@ -3,6 +3,7 @@ import Parts from './Parts';
 import SignUp from './SignUp';
 import SignUpCar from './SignUpCar';
 import SignUpUser from './SignUpUser';
+import Map from './Map';
 import {
 	BrowserRouter,
 	Route,
@@ -43,3 +44,4 @@ const App = (props) => {
 	</BrowserRouter>)
 }
 export default App;
+
