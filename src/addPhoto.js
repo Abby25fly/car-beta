@@ -47,7 +47,7 @@ class Photos extends Component{
 		return(
 			<div className="AddPhoto">
 				<div className="text-center">
-				<button className="col-xs-7 text-center add">Añadir foto...</button>
+				<NavLink to={"/camera"} className="col-xs-7 text-center add">Añadir foto...</NavLink>
 					<div className="col-xs-3">
 						<NavLink to={"/camera"} className="btnAdd"><i class="fa fa-plus-square-o" aria-hidden="true"></i></NavLink>
 					</div>

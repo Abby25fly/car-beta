@@ -141,7 +141,7 @@ class Parts extends Component {
         </center>
         <div className='row'>
           <div className="col-xs-12">
-            <NavLink to={"/abstract"} onClick={()=>this.saveInfo()} className='btn btn-block'>Siguiente</NavLink>
+            <NavLink to={"/addPhoto"} onClick={()=>this.saveInfo()} className='btn btn-block'>Siguiente</NavLink>
           </div>
         </div>
         <br />

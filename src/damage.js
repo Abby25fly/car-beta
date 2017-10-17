@@ -7,7 +7,6 @@ import tres from "./tres.png";
 import cuatro from "./cuatro.png";
 import cinco from "./cinco.png";
 import seis from "./seis.png";
-
 import {
   NavLink
 } from "react-router-dom";
@@ -37,8 +36,6 @@ class NavbarHome extends Component{
             </div>
 );
 }}
-
-
 class Images extends Component {
   constructor(props){
     super(props);
