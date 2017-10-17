@@ -1,46 +1,71 @@
+import React, { Component } from "react";
+import './Result.css';
 
-const Result = () => (
-    <div className="container">
-      <div className="[ col-sm-6 ]">
-        <div className="[ info-card ]">
-          <img
-            style={{ width: "100%" }}
-            src="https://rightindem.com/wp-content/themes/HTML5-Reset-WordPress-Theme-master/images/icon-insurer.png"
-          />
-          <div className="[ info-card-details ] animate">
-            <div className="[ info-card-header ]">
-              <h1> Robert McIntosh </h1>
-              <h3> Tipo de seguro </h3>
-            </div>
-            <div className="[ info-card-detail ]">
-              {/* Description */}
-              <p>
-                Resultado de los datos procesados. 
-              </p>
-            </div>
-          </div>
-        </div>
+const DataProcessEnough = () => (
+  <div className="container">
+    <Col xs={6} md={4} id="card">
+      <Thumbnail src="../public/avatar.png" alt="242x200">
+        <h3 id="name">Name's client</h3>
+        <p id="info-card">Description</p>
+      </Thumbnail>
+      <div>
+        <Button id="btnNext"><i><Glyphicon glyph="earphone" /></i></Button>
       </div>
-    </div>
-  );
-  
+    </Col>
+  </div>);
+
+const DataProcessCorrect = () => (
+  <div className="container">
+    <Col xs={6} md={4} id="card">
+      <Thumbnail src="../public/avatar.png">
+        <h3 id="name">Name's client</h3>
+        <p id="info-card">Description</p>
+
+        <div className="well">
+
+          <Button id="btnNext" bsSize="large" block>Confirmar</Button>
+        </div>
+
+      </Thumbnail>
+    </Col>
+  </div>
+);
 
 
-const BtnCall = ()=>(
-    <div className="well" id="btnNext">
-    
+
+const BtnCall = () => (
+  <div className="well" id="btnNext">
+
     <Button bsSize="large" block>Llamar</Button>
   </div>
 
 );
 
-const BtnNext = ()=>(
-    <div className="well" id="btnNext">
-    
+const BtnNext = () => (
+  <div className="well" id="btnNext">
+
     <Button bsSize="large" block>Siguiente</Button>
   </div>
 
 );
+
+Solutions.map(item => {
+  return (<div className="container">
+  <Col xs={6} md={4} id="card">
+    <Thumbnail src="../public/avatar.png" alt="242x200">
+      <h3 id="name">{extraer input del nombre del usuario}</h3>
+      <p id="info-card">{item.mechanicService}</p>
+    </Thumbnail>
+    <div>
+      <Button id="btnNext"><i><Glyphicon glyph="earphone" /></i></Button>
+    </div>
+  </Col>
+</div>);
+
+    
+
+
+
 
 
 
