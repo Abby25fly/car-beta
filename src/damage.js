@@ -75,29 +75,23 @@ class Images extends Component {
   }
   render() {
     return (
-      <div className="text-center">
-        <div className='row'>
-          <div className=''>
-            <div className='col-md-12 col-xs-12'>
-              <div className={'col-xs-6 image '+this.state.uno} onClick={(e)=>this.select(e)}><img className="img-responsive" id="uno" src={uno}/></div>
-              <div className={'col-xs-6 image '+this.state.dos} onClick={(e)=>this.select(e)}><img className="img-responsive" id="dos" src={dos}/></div>
-            </div> 
-            <div className='col-md-12 col-xs-12'>
-              <div className={'col-xs-6 image '+this.state.tres} onClick={(e)=>this.select(e)}><img className="img-responsive" id="tres" src={tres}/></div>
-              <div className={'col-xs-6 image '+this.state.cuatro} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cuatro" src={cuatro}/></div>
-            </div>
-            <div className='col-md-12 col-xs-12'>
-              <div className={'col-xs-6 image '+this.state.cinco} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cinco" src={cinco}/></div>
-              <div className={'col-xs-6 image '+this.state.seis} onClick={(e)=>this.select(e)}><img className="img-responsive" id="seis" src={seis}/></div>              
-            </div>
-          </div>
+      <div>
+        <div className='row text-center'>
+              <div className={'col-xs-4 image '+this.state.uno} onClick={(e)=>this.select(e)}><img className="img-responsive" id="uno" src={uno}/></div>
+              <div className={'col-xs-4 image '+this.state.dos} onClick={(e)=>this.select(e)}><img className="img-responsive" id="dos" src={dos}/></div>
+              <div className={'col-xs-4 image '+this.state.tres} onClick={(e)=>this.select(e)}><img className="img-responsive" id="tres" src={tres}/></div>
         </div>
-        <div className="form-group">
+        <div className='row text-center'>
+              <div className={'col-xs-4 image '+this.state.cuatro} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cuatro" src={cuatro}/></div>
+              <div className={'col-xs-4 image '+this.state.cinco} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cinco" src={cinco}/></div>
+              <div className={'col-xs-4 image '+this.state.seis} onClick={(e)=>this.select(e)}><img className="img-responsive" id="seis" src={seis}/></div>              
+        </div>
+        <div className="row form-group">
           <label for="comment">Descripción:</label>
-          <textarea className="form-control" rows="5" id="comment"></textarea>
+          <textarea className="form-control descrip" id="comment"></textarea>
         </div>
         <div>
-          <NavLink to={"/"}	className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
+          <NavLink to={"/showparts"}	className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
         </div>
       </div>
     );
@@ -108,16 +102,12 @@ class Damage extends Component{
 	render () {
 		return(
 			<div className="container">
-        <div className="container-fluid">
-          <div className="row">
             <NavbarHome/>
             <hr/>
             <TitleHome/>
             <br/>
             <Images/>
-          </div>
-        </div>
-			</div>
+      </div>
 		);
 	};
 }

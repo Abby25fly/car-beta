@@ -9,7 +9,11 @@ import {
 } from "react-router-dom";
 import "./damage.css";
 
-class Player extends Component {
+class Camera extends Component {
+    constructor(props){
+        super(props)
+        this.flag=true;
+    }
     componentDidMount() {
         this.updateCanvas();
     }
@@ -27,8 +31,9 @@ class Player extends Component {
         var video = document.getElementById('video');
         const context = this.refs.canvas.getContext('2d');
 
-        document.getElementById("snap").addEventListener("click", function() {
+        document.getElementById("snap").addEventListener("click", ()=> {
             context.drawImage(video, 0, 0, 380, 300);
+            this.flag=false;
         });
     }
     render() {
@@ -46,4 +51,4 @@ class Player extends Component {
     };
 }
 
-export default Player;
+export default Camera;

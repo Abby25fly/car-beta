@@ -19,9 +19,10 @@
 /**/
 
 .image{
+  width:30%;
   background-color: white;
   border:3px solid #ccc;
-  padding: 5px;
+  padding: 0px;
   box-sizing: border-box;
   border-radius: 10px;
   opacity: 0.8;
@@ -41,4 +42,8 @@
 
 a{
   color: #4BCAA4;
+}
+.descrip{
+  width:360px;
+  resize:none;
 }

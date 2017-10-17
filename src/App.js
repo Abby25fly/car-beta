@@ -4,6 +4,10 @@ import SignUp from './SignUp';
 import SignUpCar from './SignUpCar';
 import SignUpUser from './SignUpUser';
 import Map from './Map';
+import AddPhoto from './addPhoto'
+import Home from './Home';
+import Damage from './damage'
+import Camera from './camera';
 import {
 	BrowserRouter,
 	Route,
@@ -11,9 +15,6 @@ import {
 	NavLink,
 	Redirect
 } from 'react-router-dom';
-import Home from './Home';
-import Damage from './damage'
-
 
 const NotFound = (props) => {
 	return (
@@ -37,8 +38,9 @@ const App = (props) => {
 				<Route  path="/signupCar" render={() => <SignUpCar model={model} />}/>
 				<Route  path="/signupUser" render={() => <SignUpUser model={model} />}/>
 				<Route  path="/showParts" render={() => <Parts model={model} />}/>
-				<Route  path="/camera" render={() => <Parts model={model} />}/>
+				<Route  path="/camera" render={() => <Camera model={model} />}/>
 				<Route  path="/map" render={() => <Map model={model} />}/>
+				<Route  path="/addPhoto" render={() => <AddPhoto model={model} />}/>
 				<Route component={NotFound}/>
 			</Switch>
 		</div>
