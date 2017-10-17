@@ -44,8 +44,7 @@ const App = (props) => {
 				<Route  path="/addPhoto" render={() => <AddPhoto info={info} />}/>
 				<Route  path="/abstract" render={() => <Abstract info={info} />}/>
 				<Route  path="/results" render={() => <Results info={info} />}/>
-
-				<Route component={NotFound}/>
+				<Route render={() => <Home info={info} />}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
