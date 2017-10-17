@@ -44,7 +44,6 @@ class Camera extends Component {
                     <video id="video" width="380" height="300" autoPlay></video>
                     <button className="col-xs-12" id="snap">Snap Photo</button>
                     <canvas ref="canvas" id="canvas" width="380" height="300"></canvas>
-                    <input type="file" id="take-picture" accept="image/*"/>
                 </div>
             </div>
         </div>
