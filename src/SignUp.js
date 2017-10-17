@@ -92,7 +92,7 @@ class SignUp extends Component {
 						</a>
 						<a className=" btn-block btn-social btn-google-plus">
 						<i className="fa fa-google-plus"></i> Ingresar con Google
-						</a><br/>>
+						</a><br/>
 
 						<label className="form-check-label">
 							<input
@@ -103,7 +103,6 @@ class SignUp extends Component {
 							/>
 							Recuerdame 
 							<br />
-						<a href="lyft.com"> Terminos & Servicios</a>
 						</label>
 
 		 <br />
