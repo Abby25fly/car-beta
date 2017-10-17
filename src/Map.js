@@ -99,9 +99,9 @@ const ButtonLocation = () => {
     <div className="container botones text-center">
       <div className="row">
         <div className="col-md-12 col-xs-12">
-            <button className="Homebtn" type="button" name="button">
+            <NavLink to={'/damage'} className="btn Homebtn">
               Siguiente
-              </button>
+              </NavLink>
         </div>
       </div>
     </div>

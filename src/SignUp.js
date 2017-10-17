@@ -12,8 +12,8 @@ FacebookLogin
 } from 'react-facebook-login-component';
 import { GoogleLogin } from 'react-google-login-component';
 import Utils from "./Utils.js";
+import './SignUp.css';
 class SignUp extends Component {
-
 	constructor(props,context) {
 		super(props,context);
 		this.inputName = undefined;
@@ -140,7 +140,7 @@ class SignUp extends Component {
 							<br />
 						<a href="lyft.com"> Terminos & Servicios</a>
 						</label>
-						
+
 		 <br />
 						{this.state.goFordward ? (
 							<NavLink

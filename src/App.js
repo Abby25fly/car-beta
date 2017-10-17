@@ -38,6 +38,7 @@ const App = (props) => {
 				<Route  path="/signupUser" render={() => <SignUpUser model={model} />}/>
 				<Route  path="/showParts" render={() => <Parts model={model} />}/>
 				<Route  path="/camera" render={() => <Parts model={model} />}/>
+				<Route  path="/map" render={() => <Map model={model} />}/>
 				<Route component={NotFound}/>
 			</Switch>
 		</div>

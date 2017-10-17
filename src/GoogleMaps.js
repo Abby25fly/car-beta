@@ -202,8 +202,8 @@ const loadMaps = (cb) => {
 			const iw = new window.google.maps.InfoWindow( {});
 
 			let icono = {
-				url: 'https://image.flaticon.com/icons/png/128/75/75780.png',
-				size: new window.google.maps.Size(71, 71),
+				url: 'http://www.clker.com/cliparts/k/Q/V/D/z/u/map-marker-small.svg',
+				size: new window.google.maps.Size(80, 80),
 				origin: new window.google.maps.Point(0, 0),
 				anchor: new window.google.maps.Point(17, 34),
 				scaledSize: new window.google.maps.Size(35, 35)
