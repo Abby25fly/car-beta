@@ -19,27 +19,24 @@ class NavbarHome extends Component{
 		return (
             <div>
                 <header id="">
-                    <div className="container-fluid row">
-                        <div className="col-md-12 col-xs-12">
-                            <div className="col-md-2 col-xs-2"><img src={logo} className="img-responsive"/></div>
-                            <div className="col-md-8 col-xs-8"></div>
-                            <div className="col-md-2 col-xs-2"><img src={logo} className="img-responsive"/></div>
+                    <div className="container">
+                      <div className="row">
+                        <div className="col-md-1 col-xs-1 text-center">
+                            <a href="javascript:window.history.back();">
+                                <i className="fa fa-chevron-left arrow" aria-hidden="true" />
+                              </a>
+                        </div>
+                        <div className="col-md-10 col-xs-10 text-center">
+                                <h1 className="titleCar">¿Qué paso?</h1>
+                                <br />
+                                <h4 className = "infoDamage">Elige una opción e ingresa la descripción</h4>
+                            </div>                                
                         </div>
                     </div>
                 </header>
             </div>
 );
 }}
-
-
-class TitleHome extends Component{
-	render() {
-		return (
-      <div className="text-center">
-        <h1>¿Qué paso?</h1>
-      </div> 
-  );
-} };
 
 
 class Images extends Component {
@@ -88,7 +85,9 @@ class Images extends Component {
   }
   render() {
     return (
-      <div>
+      
+      <div className='container'>
+        <div className="selectImg">
         <div className='row text-center'>
               <div className={'col-xs-4 image '+this.state.uno} onClick={(e)=>this.select(e)}><img className="img-responsive" id="uno" src={uno}/></div>
               <div className={'col-xs-4 image '+this.state.dos} onClick={(e)=>this.select(e)}><img className="img-responsive" id="dos" src={dos}/></div>
@@ -99,7 +98,8 @@ class Images extends Component {
               <div className={'col-xs-4 image '+this.state.cinco} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cinco" src={cinco}/></div>
               <div className={'col-xs-4 image '+this.state.seis} onClick={(e)=>this.select(e)}><img className="img-responsive" id="seis" src={seis}/></div>              
         </div>
-        <div className="row form-group">
+        </div>
+        <div className="form-group textarea">
           <label for="comment">Descripción:</label>
           <textarea className="form-control descrip" onChange={(e)=>this.desc=e.target.value}id="comment"></textarea>
         </div>
@@ -107,6 +107,7 @@ class Images extends Component {
           <NavLink to={"/showparts"} onClick={()=>this.saveInfo()} className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
         </div>
       </div>
+      
     );
   }
 }
@@ -119,8 +120,6 @@ class Damage extends Component{
 		return(
 			<div className="container">
             <NavbarHome/>
-            <hr/>
-            <TitleHome/>
             <br/>
             <Images info={this.props.info}/>
       </div>

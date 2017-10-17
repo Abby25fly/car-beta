@@ -58,28 +58,13 @@ class SignUp extends Component {
 							</a>
 							</div>
 							<div className="col-md-10 col-xs-10 text-center">
-							<h1>Iniciar sesión</h1>
+							<h1 className="titleCar">Iniciar sesión</h1>
 							</div>
 						</div>
 						</div>
-					</header>
+					</header><br/><br/>
 					<form
 						className="">
-						<div className="input-group">
-							<span className="input-group-addon">
-								<i className="glyphicon glyphicon-user" />
-							</span>
-							<input
-								value={this.inputName}
-								type="text"
-								className="form-control"
-								name="name"
-								placeholder="Name"
-								onChange={e => (this.formsName(e))}
-								required
-							/>
-						</div>
-						<br />
 						<div className="input-group">
 							<span className="input-group-addon">
 								<i className="glyphicon glyphicon-envelope" />
@@ -102,6 +87,13 @@ class SignUp extends Component {
 						</div>
 						<div />
 						<br />
+						<a className=" btn-block btn-social btn-facebook">
+						<i className="fa fa-facebook"></i> Ingresar con Facebook
+						</a>
+						<a className=" btn-block btn-social btn-google-plus">
+						<i className="fa fa-google-plus"></i> Ingresar con Google
+						</a><br/>>
+
 						<label className="form-check-label">
 							<input
 								className="form-check-input"
