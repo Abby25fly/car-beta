@@ -80,20 +80,7 @@ class SignUp extends Component {
 					</header>
 					<form
 						className="">
-						<div className="input-group">
-							<span className="input-group-addon">
-								<i className="glyphicon glyphicon-user" />
-							</span>
-							<input
-								value={this.inputName}
-								type="text"
-								className="form-control"
-								name="name"
-								placeholder="Name"
-								onChange={e => (this.formsName(e))}
-							/>
-						</div>
-						<br />
+												<br />
 						<div className="input-group">
 							<span className="input-group-addon">
 								<i className="glyphicon glyphicon-envelope" />
@@ -104,7 +91,7 @@ class SignUp extends Component {
 								name="email"
 								placeholder="Correo"
 								onChange={e => (this.formsEmail(e))}
-							/>
+							required/>
 						</div>
 						<br />
 						<div className="input-group">
@@ -114,7 +101,7 @@ class SignUp extends Component {
 							<input type="password" 
 							className="form-control" 
 							id="exampleInputPassword1" 
-							placeholder="Contraseña" />
+							placeholder="Contraseña" required/>
 						</div>
 						<div />
 						<br />
