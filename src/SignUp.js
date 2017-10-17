@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import {
-	BrowserRouter,
-	Route,
-	Switch,
-	NavLink,
-	Redirect
+	NavLink
 	
 } from "react-router-dom";
 import Utils from "./Utils.js";
 import './SignUp.css';
+
 class SignUp extends Component {
 	constructor(props,context) {
 		super(props,context);
@@ -23,35 +20,23 @@ class SignUp extends Component {
 		formsName(e) {
 		this.inputName = e.target.value;
 
-		// let patron = /[^a-zA-Z -]|( )|(--)|(^s*$)/;
-		// 	if(patron.test(this.inputName)) {
-		// 		alert('no es correcta')
-
-		// 	}else alert( 'es correcta')
-
 	}
 	formsEmail(e) {
 		this.inputEmail = e.target.value;
-		// if(this.inputEmail = '') {
-
-		// }
-		// model.userInfo.email = this.inputEmail
-
 	}
 	formsPassword(e) {
 		this.inputpassword = e.target.value;
 	}
 	render() {
-		const { model } = this.props;
 		const onInputChange = e => {
 			this.setState({
 				goFordward: e.target.checked
 			});
+			
 		};
-		const prueba = () => {
-			model.userInfo.email = this.inputEmail
-			model.userInfo.name = this.inputName
-			model.userInfo.password = this.inputpassword
+		const saveInfo = () => {
+			this.props.info.email = this.inputEmail
+			this.props.info.user = this.inputName
 		}
 		const validation = e => {
 			this.setState = {
@@ -91,6 +76,7 @@ class SignUp extends Component {
 								name="name"
 								placeholder="Name"
 								onChange={e => (this.formsName(e))}
+								required
 							/>
 						</div>
 						<br />
@@ -104,6 +90,7 @@ class SignUp extends Component {
 								name="email"
 								placeholder="Correo"
 								onChange={e => (this.formsEmail(e))}
+								required
 							/>
 						</div>
 						<br />
@@ -111,7 +98,7 @@ class SignUp extends Component {
 							<span className="input-group-addon">
 							<i className="fa fa-unlock" aria-hidden="true"></i>
 							</span>
-							<input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+							<input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" required/>
 						</div>
 						<div />
 						<br />
@@ -130,7 +117,7 @@ class SignUp extends Component {
 		 <br />
 						{this.state.goFordward ? (
 							<NavLink
-								onClick={prueba}
+								onClick={saveInfo}
 								to={"/map"}
 								className="btn btn-lg btn-block btn-lyft"
 							>

@@ -5,6 +5,7 @@ import {NavLink} from "react-router-dom";
 class Parts extends Component {
   constructor(props){
     super(props);
+    console.log(this.props.info);
     this.state={
       fr:'',
       fwl:'',
@@ -51,6 +52,37 @@ class Parts extends Component {
       this.state.bumper === ''?this.setState({bumper:'selected'}):this.setState({bumper:''})
     if(e.target.textContent ==='Cola Derecha')
       this.state.tr === ''?this.setState({tr:'selected'}):this.setState({tr:''})
+  }
+  saveInfo(){
+    if(this.state.fr !=='')
+      this.props.info.damagedParts.push("Frente")
+    if(this.state.fwl !=='')
+      this.props.info.damagedParts.push("Ala izquierda")
+    if(this.state.fwr !=='')
+      this.props.info.damagedParts.push("Ala derecha")
+    if(this.state.bonnet !=='')
+      this.props.info.damagedParts.push("Capot")
+    if(this.state.ws !=='')
+    this.props.info.damagedParts.push("Parabrisas")
+    if(this.state.fdl !=='')
+    this.props.info.damagedParts.push("Puerta delantera izquierda")
+    if(this.state.fdr !=='')
+    this.props.info.damagedParts.push("Puerta delantera derecha")
+    if(this.state.roof !=='')
+    this.props.info.damagedParts.push("Techo")
+    if(this.state.bdl !=='')
+    this.props.info.damagedParts.push("Puerta trasera izquierda")
+    if(this.state.bdr !=='')
+    this.props.info.damagedParts.push("Puerta trasera derecha")
+    if(this.state.rw !=='')
+    this.props.info.damagedParts.push("Ventana trasera")
+    if(this.state.bumper !=='')
+    this.props.info.damagedParts.push("Maletero")
+    if(this.state.tl !=='')
+    this.props.info.damagedParts.push("Cola izquierda")
+    if(this.state.tr !=='')
+    this.props.info.damagedParts.push("Cola derecha")
+    
   }
   render() {
     return (
@@ -99,7 +131,7 @@ class Parts extends Component {
         </div>
         <div className='row'>
           <div className="col-xs-12">
-            <NavLink to={"/addPhoto"} className='btn btn-block'>Siguiente</NavLink>
+            <NavLink to={"/abstract"} onClick={()=>this.saveInfo()} className='btn btn-block'>Siguiente</NavLink>
           </div>
         </div>
         <br/>

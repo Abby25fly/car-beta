@@ -57,21 +57,6 @@ class SignUpUser extends Component {
             );
         }
 
-        const InputProfile = () => {
-            return (
-                <div className="form-group dataRegister">
-                    <div className="col-md-6 col-xs-6 dataInput">
-                        <label htmlFor="text">Nombre:</label>
-                        <input type="text" className="form-control" name="fist name" placeholder="Nombre" required/>
-                    </div>
-                    <div className="col-md-6 col-xs-6 dataInput">
-                        <label htmlFor="text">Apellidos:</label>
-                        <input type="text" className="form-control" name="last name"  placeholder="Apellidos" required/>
-                    </div><br/>
-                   
-                </div>
-            );
-        }
         return (
             <div>
                 <HeaderProfile />
@@ -101,7 +86,17 @@ class SignUpUser extends Component {
                                     onChange={onInputChange} />
                                 </div>
                                 <br />
-                                <InputProfile /><br/>
+                                <div className="form-group dataRegister">
+                                    <div className="col-md-6 col-xs-6 dataInput">
+                                        <label htmlFor="text">Nombre:</label>
+                                        <input type="text" className="form-control" name="fist name" placeholder="Nombre" required/>
+                                    </div>
+                                    <div className="col-md-6 col-xs-6 dataInput">
+                                        <label htmlFor="text">Apellidos:</label>
+                                        <input type="text" className="form-control" name="last name"  placeholder="Apellidos" required/>
+                                    </div><br/>
+                                
+                                </div><br/>
                                 <div className="form-group dataRegister">
                                     <div className="col-md-6 col-xs-6 dataInput">
                                         <label htmlFor="text">Teléfono:</label>

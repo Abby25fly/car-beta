@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './SignUpCar.css';
 import {
-  BrowserRouter,
-  Route,
-  Switch,
-  NavLink,
-  Redirect
+  NavLink
 } from 'react-router-dom'
 
 class SignUpCar extends Component {
@@ -20,7 +16,6 @@ class SignUpCar extends Component {
       phone: null
     }
   }
-
 
   render() {
     const { model } = this.props;
@@ -117,7 +112,7 @@ class SignUpCar extends Component {
                   <label htmlFor="text">Año de Fabricación:</label>
                   <input
                       className="form-control"
-                      type="text"
+                      type="number"
                       placeholder= "Año de Fabricación"
                       required
                       />

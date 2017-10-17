@@ -9,12 +9,7 @@ import cinco from "./cinco.png";
 import seis from "./seis.png";
 
 import {
-  BrowserRouter,
-  Route,
-  Switch,
-  NavLink,
-  Link,
-  Redirect
+  NavLink
 } from "react-router-dom";
 import "./damage.css";
 
@@ -50,6 +45,7 @@ class TitleHome extends Component{
 class Images extends Component {
   constructor(props){
     super(props);
+    this.desc=null;
     this.state={
       uno:'',
       dos:'',
@@ -73,6 +69,23 @@ class Images extends Component {
     if(e.target.id ==='seis')
       this.state.seis === ''?this.setState({seis:'selected'}):this.setState({seis:''})
   }
+  saveInfo(){
+    if(this.state.uno!='')
+      this.props.info.typeDamage =0;
+    else if(this.state.dos!='')
+      this.props.info.typeDamage =1;
+    else if(this.state.tres!='')
+      this.props.info.typeDamage =2;
+    else if(this.state.cuatro!='')
+      this.props.info.typeDamage =3;
+    else if(this.state.cinco!='')
+      this.props.info.typeDamage =4;
+    else if(this.state.seis!='')
+      this.props.info.typeDamage =5;
+
+    this.props.info.description=this.desc;
+
+  }
   render() {
     return (
       <div>
@@ -88,10 +101,10 @@ class Images extends Component {
         </div>
         <div className="row form-group">
           <label for="comment">Descripción:</label>
-          <textarea className="form-control descrip" id="comment"></textarea>
+          <textarea className="form-control descrip" onChange={(e)=>this.desc=e.target.value}id="comment"></textarea>
         </div>
         <div>
-          <NavLink to={"/showparts"}	className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
+          <NavLink to={"/showparts"} onClick={()=>this.saveInfo()} className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
         </div>
       </div>
     );
@@ -99,6 +112,9 @@ class Images extends Component {
 }
 
 class Damage extends Component{
+  constructor(props){
+    super(props);
+  }
 	render () {
 		return(
 			<div className="container">
@@ -106,7 +122,7 @@ class Damage extends Component{
             <hr/>
             <TitleHome/>
             <br/>
-            <Images/>
+            <Images info={this.props.info}/>
       </div>
 		);
 	};
