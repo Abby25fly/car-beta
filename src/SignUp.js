@@ -141,10 +141,6 @@ class SignUp extends Component {
 						<a href="lyft.com"> Terminos & Servicios</a>
 						</label>
 						
-<<<<<<< HEAD
-						
-=======
->>>>>>> d83599f8c08dc17d34f81d39dc3098c914111e56
 		 <br />
 						{this.state.goFordward ? (
 							<NavLink
