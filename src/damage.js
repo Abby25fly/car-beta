@@ -74,7 +74,7 @@ class Images extends Component {
     return (
       
       <div className='container'>
-        <center>
+        <div className="selectImg">
         <div className='row text-center'>
               <div className={'col-xs-4 image '+this.state.uno} onClick={(e)=>this.select(e)}><img className="img-responsive" id="uno" src={uno}/></div>
               <div className={'col-xs-4 image '+this.state.dos} onClick={(e)=>this.select(e)}><img className="img-responsive" id="dos" src={dos}/></div>
@@ -85,7 +85,7 @@ class Images extends Component {
               <div className={'col-xs-4 image '+this.state.cinco} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cinco" src={cinco}/></div>
               <div className={'col-xs-4 image '+this.state.seis} onClick={(e)=>this.select(e)}><img className="img-responsive" id="seis" src={seis}/></div>              
         </div>
-        </center>
+        </div>
         <div className="form-group textarea">
           <label for="comment">Descripción:</label>
           <textarea className="form-control descrip" id="comment"></textarea>
