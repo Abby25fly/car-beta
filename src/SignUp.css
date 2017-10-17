@@ -1,3 +1,30 @@
+
 span{
   position:initial;
+}
+.fa-google-plus {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #E92A2D;
+    color: white;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #0C0864;
+    color: white;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
 }
