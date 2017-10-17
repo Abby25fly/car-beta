@@ -53,9 +53,9 @@ class SignUpCar extends Component {
                 </a>
               </div>
               <div className="col-md-10 col-xs-10 text-center">
-                <h1>Regístrate</h1>
+                <h1 className="titleCar">Regístrate</h1>
                 <br /> <br />
-                <h4>Información del Vehículo</h4>
+                <h4 className = "infoCar">Información del Vehículo</h4>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ class SignUpCar extends Component {
                   <div className="input-group">
                   <div className="input-group-btn ">
                     <div className="form-group">
-                      <select className="form-control">
+                      <select className="form-control" required>
                         <option>Marca</option>
                         <option>Audi</option>
                         <option>BMW</option>
@@ -117,7 +117,7 @@ class SignUpCar extends Component {
                   <label htmlFor="text">Año de Fabricación:</label>
                   <input
                       className="form-control"
-                      type="text"
+                      type="number"
                       placeholder= "Año de Fabricación"
                       required
                       />
@@ -150,7 +150,7 @@ class SignUpCar extends Component {
                     this.state.completed ?
                       <NavLink to={"./SignUpUser"}
                           className="btn btn-lg btn-block next">
-                          Next
+                          Siguiente
                       </NavLink>
                       :
                       <button

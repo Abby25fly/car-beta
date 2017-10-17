@@ -98,7 +98,7 @@ class SignUpUser extends Component {
                                     type="number"
                                     placeholder= "Número"
                                     required
-                                    onChange={onInputChange} />
+                                    />
                                 </div>
                                 <br />
                                 <InputProfile /><br/>
@@ -115,7 +115,7 @@ class SignUpUser extends Component {
                                 </div>
                                 <br/>
                                 <div>
-                                <input className="form-check-input" id="agreeUser" type="checkbox"  required onChange={onInputChange} />
+                                <input className="form-check-input" id="agreeUser" type="checkbox"  required onChange={onInputChange}/>
                                     Estoy de Acuerdo con los <a href="lyft.com"> Términos del Servicio</a>
                                 </div><br/>
                                     
