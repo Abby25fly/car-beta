@@ -3,12 +3,12 @@
     padding-right: 20px;
     }
 
-    h1{
+.titleCar{
         font-weight: bolder;
         color:#4BCAA4;
       }
       
-      h4{
+      .infoCar{
         font-weight: bolder;
         padding-bottom: 10px;
       }
@@ -17,13 +17,7 @@
     width: 130px;
     }
 
-    span
-    {
-    position: absolute;
-    z-index: 100;
-    left: 64px;
-    top:7px;
-    }
+   
 
     #telNumber
     {
