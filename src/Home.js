@@ -8,6 +8,7 @@ import './Home.css'
 const Home = ({ model }) => {
 
 	return (
+		
 		<div className="home container">
 			<div className="row">
 				<div className="col-xs-12 text-center logo-home">
