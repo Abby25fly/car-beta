@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './SignUpCar.css';
 import {
-  BrowserRouter,
-  Route,
-  Switch,
-  NavLink,
-  Redirect
+  NavLink
 } from 'react-router-dom'
 
 class SignUpCar extends Component {
@@ -20,7 +16,6 @@ class SignUpCar extends Component {
       phone: null
     }
   }
-
 
   render() {
     const { model } = this.props;

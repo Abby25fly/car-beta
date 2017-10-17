@@ -8,7 +8,6 @@ import registerServiceWorker from './registerServiceWorker';
 const model = new LyftModel();
 const render = () => {
 	ReactDOM.render(
-
 			<App model = {model}/>
 		 , document.getElementById('root'));
 }
