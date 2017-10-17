@@ -132,7 +132,10 @@ class SignUp extends Component {
 							<span className="input-group-addon">
 							<i className="fa fa-unlock" aria-hidden="true"></i>
 							</span>
-							<input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+							<input type="password" 
+							className="form-control" 
+							id="exampleInputPassword1" 
+							placeholder="Contraseña" />
 						</div>
 						<div />
 						<br />
@@ -173,7 +176,7 @@ class SignUp extends Component {
 						  fields="id,email,name"
 						  version="v2.5"
 						  className="facebook-login fa fa-facebook "
-						  buttonText=""/>
+						  buttonText=" Iniciar sesion"/>
 		 </div>
 		 <br />
 		 <div>
@@ -183,7 +186,7 @@ class SignUp extends Component {
                      scope="profile"
                      fetchBasicProfile={false}
                      responseHandler={this.responseGoogle}
-					 buttonText=""
+					 buttonText=" Iniciar sesion"
                      />
       </div>
 				</section>
