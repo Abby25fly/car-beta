@@ -30,6 +30,7 @@ const DetailInsurance = [
 const Solutions = [
     {
         mechanicService: "Servicio Mecánico",
+        callCrane: "Servicio de Grúa",
         replacementDriver: "Chofer de reemplazo",
         replacementCar: "Carro de reemplazo",
         assistance: "Asistente de la Positiva Seguros al lugar del incidente",
