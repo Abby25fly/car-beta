@@ -2,15 +2,6 @@
     padding-top: 30px;
     padding-right: 20px;
   }
-  h1{
-    font-weight: bolder;
-    color:#4BCAA4;
-  }
-  
-  h4{
-    font-weight: bolder;
-    padding-bottom: 10px;
-  }
   
   .inputIcon{
       padding-left: 35px;
@@ -47,12 +38,12 @@
     color: white;
     font-size: 25px;
     font-weight: bold;
-    background-color: #4f5967;
+    background-color: #4BCAA4;
     }
   
     .next:hover{
-    background:-webkit-linear-gradient(left, #4BCAA4,#4f5967);
-    border: transparent;
+        border: #4f5967;
+        color: white;
     }
     
     .btn-next{

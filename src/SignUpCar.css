@@ -3,12 +3,12 @@
     padding-right: 20px;
     }
 
-    h1{
+.titleCar{
         font-weight: bolder;
         color:#4BCAA4;
       }
       
-      h4{
+      .infoCar{
         font-weight: bolder;
         padding-bottom: 10px;
       }
@@ -17,13 +17,7 @@
     width: 130px;
     }
 
-    span
-    {
-    position: absolute;
-    z-index: 100;
-    left: 64px;
-    top:7px;
-    }
+   
 
     #telNumber
     {
@@ -39,12 +33,11 @@
         color: white;
         font-size: 25px;
         font-weight: bold;
-        background-color: #4f5967;
+        background-color: #4BCAA4;
         }
         .next:hover{
-        background:-webkit-linear-gradient(left, #4BCAA4,#4f5967);
-        border: transparent;
-        color: white;
+            border: #4f5967;
+            color: white;
         }
         .btn-next{
         position: absolute;

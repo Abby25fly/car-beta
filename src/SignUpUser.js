@@ -47,9 +47,9 @@ class SignUpUser extends Component {
                                 </a>
                             </div>
                             <div className="col-md-10 col-xs-10 text-center">
-                                <h1>Regístrate</h1>
+                                <h1 className="titleCar">Regístrate</h1>
                                 <br /> <br />
-                                <h4>Información del Propietario</h4>
+                                <h4 className = "infoCar">Información del Propietario</h4>
                             </div>
                         </div>
                     </div>

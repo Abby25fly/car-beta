@@ -48,61 +48,66 @@ class TitleHome extends Component{
 
 
 class Images extends Component {
-	render () {  
-		return (
-        <div>
-          <table className="col-md-12 col-xs-12">
-            <tbody>
-            <tr>
-              <td className="col-xs-4">
-                <img src={uno} className="img-responsive"/>
-              </td>
-              <td className="col-xs-4">
-                <img src={dos} className="img-responsive"/>
-              </td>
-              <td className="col-xs-4">
-                <img src={tres} className="img-responsive"/>
-              </td>
-            </tr>
-            <tr>
-              <td className="col-xs-4">
-                <img src={cuatro} className="img-responsive"/>
-              </td>
-              <td className="col-xs-4">
-                <img src={cinco} className="img-responsive"/>
-              </td>
-              <td className="col-xs-4">
-                <img src={seis} className="img-responsive"/>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-          <div className="form-group">
-            <label for="comment">Descripción:</label>
-            <textarea className="form-control" rows="5" id="comment"></textarea>
-          </div>
-          <div>
-          <NavLink to={"/BattleUsers"}	className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
-          </div>
+  constructor(props){
+    super(props);
+    this.state={
+      uno:'',
+      dos:'',
+      tres:'',
+      cuatro:'',
+      cinco:'',
+      seis:''
+    };
+  }
+  select(e){
+    if(e.target.id ==='uno')
+      this.state.uno === ''?this.setState({uno:'selected'}):this.setState({uno:''})
+    if(e.target.id ==='dos')
+      this.state.dos === ''?this.setState({dos:'selected'}):this.setState({dos:''})
+    if(e.target.id ==='tres')
+      this.state.tres === ''?this.setState({tres:'selected'}):this.setState({tres:''})
+    if(e.target.id ==='cuatro')
+      this.state.cuatro === ''?this.setState({cuatro:'selected'}):this.setState({cuatro:''})
+    if(e.target.id ==='cinco')
+      this.state.cinco === ''?this.setState({cinco:'selected'}):this.setState({cinco:''})
+    if(e.target.id ==='seis')
+      this.state.seis === ''?this.setState({seis:'selected'}):this.setState({seis:''})
+  }
+  render() {
+    return (
+      <div>
+        <div className='row text-center'>
+              <div className={'col-xs-4 image '+this.state.uno} onClick={(e)=>this.select(e)}><img className="img-responsive" id="uno" src={uno}/></div>
+              <div className={'col-xs-4 image '+this.state.dos} onClick={(e)=>this.select(e)}><img className="img-responsive" id="dos" src={dos}/></div>
+              <div className={'col-xs-4 image '+this.state.tres} onClick={(e)=>this.select(e)}><img className="img-responsive" id="tres" src={tres}/></div>
         </div>
-		);
-	};
+        <div className='row text-center'>
+              <div className={'col-xs-4 image '+this.state.cuatro} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cuatro" src={cuatro}/></div>
+              <div className={'col-xs-4 image '+this.state.cinco} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cinco" src={cinco}/></div>
+              <div className={'col-xs-4 image '+this.state.seis} onClick={(e)=>this.select(e)}><img className="img-responsive" id="seis" src={seis}/></div>              
+        </div>
+        <div className="row form-group">
+          <label for="comment">Descripción:</label>
+          <textarea className="form-control descrip" id="comment"></textarea>
+        </div>
+        <div>
+          <NavLink to={"/showparts"}	className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
+        </div>
+      </div>
+    );
+  }
 }
 
 class Damage extends Component{
 	render () {
 		return(
 			<div className="container">
-        <div className="container-fluid">
-          <div className="row">
             <NavbarHome/>
             <hr/>
             <TitleHome/>
             <br/>
             <Images/>
-          </div>
-        </div>
-			</div>
+      </div>
 		);
 	};
 }

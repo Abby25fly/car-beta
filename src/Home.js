@@ -17,7 +17,7 @@ const Home = ({ model }) => {
 			</div>
 			<div className="row  btns">
 				<div className="col-xs-6 col-lg-6 col-md-6">
-					<NavLink to={"/signup"}
+					<NavLink to={"/signupCar"}
 						className="btn btn-lg btn-block btn-signUp"
 					>
 						Registrate

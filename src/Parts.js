@@ -99,7 +99,7 @@ class Parts extends Component {
         </div>
         <div className='row'>
           <div className="col-xs-12">
-            <NavLink to={"/camera"} className='btn btn-block'>Siguiente</NavLink>
+            <NavLink to={"/addPhoto"} className='btn btn-block'>Siguiente</NavLink>
           </div>
         </div>
         <br/>
