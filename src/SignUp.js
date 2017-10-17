@@ -7,6 +7,7 @@ import {
 	Redirect
 } from "react-router-dom";
 
+import './SignUp.css';
 import Utils from "./Utils.js";
 class SignUpForm extends Component {
 
@@ -79,7 +80,7 @@ class SignUpForm extends Component {
 						</div>
 					</header>
 					<form
-						className="form-horizontal">
+						className="">
 						<div className="input-group">
 							<span className="input-group-addon">
 								<i className="glyphicon glyphicon-user" />
