@@ -73,7 +73,7 @@ class Camera extends Component {
         <div className="row">
           <div className="col-md-12 col-xs-12">
             <br/>
-            <NavLink to={"/"} className="btn Homebtn">
+            <NavLink to={"/abstract"} className="btn Homebtn">
               Siguiente
             </NavLink>
           </div>

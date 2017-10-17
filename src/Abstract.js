@@ -1,5 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import './Abstract.css';
+
 class Abstract extends React.Component{
     constructor(props){
         super(props);
@@ -41,11 +43,24 @@ class Abstract extends React.Component{
     }
     render(){
         return <div className='container'>
-                    <h1>Información registrada</h1>
                     <div className='row'>
-                        <div className='col-xs-offset-1 col-xs-10'>
-                            <img src='./avatar.png'/>
+                        <div className="col-md-1 col-xs-1 text-center">
+                            <a href="javascript:window.history.back();">
+                                <i className="fa fa-chevron-left arrow" aria-hidden="true" />
+                              </a>
                         </div>
+                            <div className="col-md-10 col-xs-10 text-center">
+                                <h3 className="titleCar">Información registrada</h3>
+                            </div>                                
+                    </div>
+                    <div className='row'>
+                        <div className='col-xs-offset-4 col-xs-4'>
+                            <div className='avatar'>
+                                <img src='http://www.myiconfinder.com/uploads/iconsets/218780527bb8acc76f78fecaca298342.png'/>
+                            </div>
+                                
+                        </div>
+
                     </div>
                     <br/>
                     <b>Usuario:</b><br/><span>{this.props.info.user}</span><br/>

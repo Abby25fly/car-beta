@@ -18,13 +18,6 @@ import {
 	Redirect	
 } from 'react-router-dom';
 
-const NotFound = (props) => {
-	return (
-		<div><h2> Error 404! </h2></div>
-	);
-}
-
-
 let info = new Info();
 const App = (props) => {
 	const {model} =  props;

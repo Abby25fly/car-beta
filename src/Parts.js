@@ -127,7 +127,7 @@ class Parts extends Component {
               <div className={'box ' + this.state.bdl} onClick={(e) => this.select(e)}>P. Trasera Izquierda</div>
               <div className={'box ' + this.state.bdr} onClick={(e) => this.select(e)}>P. Trasera Derecha</div>
             </div>
-            <br /><br />
+            <br />
             <div className='one col-md-12'>
               <div className={'box ' + this.state.rw} onClick={(e) => this.select(e)}>Ventana Trasera</div>
             </div>
@@ -139,6 +139,7 @@ class Parts extends Component {
           </div>
         </div>
         </center>
+        <br/><br/>
         <div className='row'>
           <div className="col-xs-12">
             <NavLink to={"/addPhoto"} onClick={()=>this.saveInfo()} className='btn btn-block'>Siguiente</NavLink>
