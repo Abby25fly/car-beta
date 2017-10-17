@@ -5,14 +5,18 @@ import {
 	Switch,
 	NavLink,
 	Redirect
+	
 } from "react-router-dom";
-
-import './SignUp.css';
+import { 
+FacebookLogin 
+} from 'react-facebook-login-component';
+import { GoogleLogin } from 'react-google-login-component';
 import Utils from "./Utils.js";
-class SignUpForm extends Component {
 
-	constructor(props) {
-		super(props);
+class SignUp extends Component {
+
+	constructor(props,context) {
+		super(props,context);
 		this.inputName = undefined;
 		this.inputEmail = undefined;
 		this.inputpassword = undefined;
@@ -21,7 +25,17 @@ class SignUpForm extends Component {
 			complete: false
 		};
 	}
-	formsName(e) {
+	responseFacebook (response) {
+		console.log(response);
+		//anything else you want to do(save to localStorage)... 
+	  } 
+	  responseGoogle (googleUser) {
+		var id_token = googleUser.getAuthResponse().id_token;
+		console.log({accessToken: id_token});
+		//anything else you want to do(save to localStorage)...
+	  }
+	
+		formsName(e) {
 		this.inputName = e.target.value;
 
 		// let patron = /[^a-zA-Z -]|( )|(--)|(^s*$)/;
@@ -127,6 +141,9 @@ class SignUpForm extends Component {
 							<br />
 						<a href="lyft.com"> Terminos & Servicios</a>
 						</label>
+						
+						
+		 <br />
 						{this.state.goFordward ? (
 							<NavLink
 								onClick={prueba}
@@ -141,9 +158,37 @@ class SignUpForm extends Component {
               </button>
 							)}
 					</form>
+					
+					<div>
+		   <FacebookLogin socialId="732068980315428"
+						  language="en_US"
+						  scope="public_profile,email"
+						  responseHandler={this.responseFacebook}
+						  xfbml={true}
+						  fields="id,email,name"
+						  version="v2.5"
+						  className="facebook-login fa fa-facebook "
+						  buttonText=""/>
+		 </div>
+		 <br />
+		 <div>
+        <GoogleLogin socialId="485307064541-svc54uido59qvkvatniict2iifutrpqr.apps.googleusercontent.com"
+		
+					 className="google-login fa fa-google-plus "
+                     scope="profile"
+                     fetchBasicProfile={false}
+                     responseHandler={this.responseGoogle}
+					 buttonText=""
+                     />
+      </div>
 				</section>
 			</div>
 		);
 	}
 }
-export default SignUpForm;
+export default SignUp;
+
+	
+	
+	
+	
