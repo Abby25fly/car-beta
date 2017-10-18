@@ -101,7 +101,7 @@ class Images extends Component {
           <textarea className="form-control descrip" onChange={(e)=>this.desc=e.target.value}id="comment"></textarea>
         </div>
         <div>
-          <NavLink to={"/showparts"} onClick={()=>this.saveInfo()} className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
+          <NavLink  to={"/showparts"} onClick={()=>this.saveInfo()} className="btn btn-lg btn-block btn-battle">Siguiente</NavLink>
         </div>
       </div>
       
