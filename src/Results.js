@@ -23,9 +23,9 @@ class Results extends Component {
       return <div>
         <h4>Tipo de daño</h4>
         <p className='user-info'>{obj.nameDamage}({obj.damage})</p>
-        <h4>Su seguro puede hacer lo siguiente: </h4>
+        <h4>Su seguro debe hacer lo siguiente: </h4>
         <p className='user-info'>{obj.description}</p>
-        <h4>Y puede brindarle las siguientes soluciones:</h4>
+        <h4>Y le brinda las siguientes soluciones:</h4>
         <ul className='user-info'>
           {
             obj.solutions.map((item,index)=>{
