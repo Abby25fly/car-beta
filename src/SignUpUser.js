@@ -57,21 +57,6 @@ class SignUpUser extends Component {
             );
         }
 
-        const InputProfile = () => {
-            return (
-                <div className="form-group dataRegister">
-                    <div className="col-md-6 col-xs-6 dataInput">
-                        <label htmlFor="text">Nombre:</label>
-                        <input type="text" className="form-control" name="fist name" placeholder="Nombre" required/>
-                    </div>
-                    <div className="col-md-6 col-xs-6 dataInput">
-                        <label htmlFor="text">Apellidos:</label>
-                        <input type="text" className="form-control" name="last name"  placeholder="Apellidos" required/>
-                    </div><br/>
-                   
-                </div>
-            );
-        }
         return (
             <div>
                 <HeaderProfile />
@@ -98,10 +83,20 @@ class SignUpUser extends Component {
                                     type="number"
                                     placeholder= "Número"
                                     required
-                                    onChange={onInputChange} />
+                                    />
                                 </div>
                                 <br />
-                                <InputProfile /><br/>
+                                <div className="form-group dataRegister">
+                                    <div className="col-md-6 col-xs-6 dataInput">
+                                        <label htmlFor="text">Nombre:</label>
+                                        <input type="text" className="form-control" name="fist name" placeholder="Nombre" required/>
+                                    </div>
+                                    <div className="col-md-6 col-xs-6 dataInput">
+                                        <label htmlFor="text">Apellidos:</label>
+                                        <input type="text" className="form-control" name="last name"  placeholder="Apellidos" required/>
+                                    </div><br/>
+                                
+                                </div><br/>
                                 <div className="form-group dataRegister">
                                     <div className="col-md-6 col-xs-6 dataInput">
                                         <label htmlFor="text">Teléfono:</label>
@@ -115,7 +110,7 @@ class SignUpUser extends Component {
                                 </div>
                                 <br/>
                                 <div>
-                                <input className="form-check-input" id="agreeUser" type="checkbox"  required onChange={onInputChange} />
+                                <input className="form-check-input" id="agreeUser" type="checkbox"  required onChange={onInputChange}/>
                                     Estoy de Acuerdo con los <a href="lyft.com"> Términos del Servicio</a>
                                 </div><br/>
                                     

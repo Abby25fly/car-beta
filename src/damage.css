@@ -1,23 +1,28 @@
-/*header .img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 35% auto -4% auto;
-}*/
 
 .btn-battle{
-    background-color: #4BCAA4;
-    color:white;
-    border-radius: none;
-    margin: 0 auto;
+  border:white 3px solid;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #4BCAA4;
   }
 
   body{
     box-sizing: border-box;
   }
 
+  .infoDamage{
+    font-weight: bolder;
+    margin-top: 0px;
+  }
 /**/
 
+.selectImg{
+  padding-left: 20px;
+}
 .image{
   width:30%;
   background-color: white;
@@ -33,17 +38,47 @@
   box-sizing: border-box;
 }
 
+.AddPhoto{
+  margin-top: 20px;
+}
 .add{
   background: transparent;
   border-radius: 20px;
   border: 2px solid #4BCAA4;
   padding: 5px;
+  margin-left: 40px;
+  font-size: 22px;
 }
 
-a{
+.btnAdd{
+  padding: 10px;
+  border-radius: 10px;
   color: #4BCAA4;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.textarea {
+  margin-top: 18px;
+  font-size: 18px;
 }
 .descrip{
-  width:360px;
+  width:45vh;
   resize:none;
+}
+
+.capture{
+  border:white 3px solid;
+  width: 50%;
+  padding: 5px;
+  border-radius: 10px;
+  color:white;
+  font-size: 25px;
+font-weight: bold;
+background-color: #4BCAA4;
+}
+
+.screen{
+  width: 250px;
+  height: 215px;
 }

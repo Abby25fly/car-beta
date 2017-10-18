@@ -71,7 +71,7 @@ const loadMaps = (cb) => {
 						//lyft.origin=results[0]['formatted_address'];
 
 						this.sourceMarker.iw.setContent ('<div><strong>'+ results[0]['formatted_address'] +'</strong><br>')
-
+						this.props.info.location=results[0]['formatted_address'];
 						this.sourceMarker.iw.open( this.map, this.sourceMarker);
 
 						//lyft.detailOrigin.setContent('<div><strong>'+lyft.origin+'</strong><br>');

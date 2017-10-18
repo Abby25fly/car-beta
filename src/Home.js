@@ -18,14 +18,14 @@ const Home = ({ model }) => {
 			<div className="row  btns">
 				<div className="col-xs-6 col-lg-6 col-md-6">
 					<NavLink to={"/signupCar"}
-						className="btn btn-lg btn-block btn-signUp"
+						className="btn lit btn-lg btn-block btn-signUp"
 					>
 						Registrate
 					</NavLink>
 				</div>
 				<div className="col-xs-6 col-lg-6 col-md-6">
 					<NavLink to={"/signup"}
-						className="btn btn-lg btn-block btn-signUp"
+						className="btn lit btn-lg btn-block btn-signUp"
 					>
 						Iniciar sesión
 					</NavLink>

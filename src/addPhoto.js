@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logito.png";
-import logoMax from "./logo.png";
-
+import carDamage from "./carDamage.png";
 import {
   BrowserRouter,
   Route,
@@ -16,37 +14,44 @@ class NavbarHome extends Component{
 	render() {
     
 		return (
-                <header id="">
-                    
-                        <div className="col-md-12 col-xs-12">
-                            <div className="col-md-2 col-xs-2"><img src={logo} className="img-responsive"/></div>
-                            <div className="col-md-8 col-xs-8"></div>
-                            <div className="col-md-2 col-xs-2"><img src={logo} className="img-responsive"/></div>
+                <header>
+					<div className="container">
+                      <div className="row">
+                        <div className="col-md-1 col-xs-1 text-center">
+                            <a href="javascript:window.history.back();">
+                                <i className="fa fa-chevron-left arrow" aria-hidden="true" />
+                              </a>
                         </div>
+                        <div className="col-md-10 col-xs-10 text-center">
+                                <h2 className="titleCar">Fotos de Daños</h2><br/><br/>
+								<div className = "infoDamage">
+                                <h3 >Instrucciones:</h3>
+								<h4>
+								Colóquese a 2 metros de distancia del auto para capturar las imágenes
+								</h4>
+								</div>
+                        </div>
+						<div className="col-xs-12 text-center">
+							<div className="col-md-2 col-xs-2"><img src={carDamage} /></div>
+						</div>                                
+                        </div>
+                    </div>
                 </header>
 );
 }}
 
 
-class TitleHome extends Component{
-	render() {
-		return (
-      <div className="text-center">
-        <h1>Fotos de daños</h1>
-      </div> 
-  );
-} };
 
 class Photos extends Component{
 	render(){
 		return(
-			<div>Parte frontal:
-			<div className="col-xs-12">
-			<button className="col-xs-10 text-center add">Añadir foto...</button>
-				<div className="col-xs-2">
-					<NavLink to={"/camera"}className="btn"><i class="fa fa-plus-square-o" aria-hidden="true"></i></NavLink>
+			<div className="AddPhoto">
+				<div className="text-center">
+				<NavLink to={"/camera"} className="col-xs-7 text-center add">Añadir foto...</NavLink>
+					<div className="col-xs-3">
+						<NavLink to={"/camera"} className="btnAdd"><i class="fa fa-plus-square-o" aria-hidden="true"></i></NavLink>
+					</div>
 				</div>
-			</div>
 			</div>
 		);
 	}
@@ -57,15 +62,11 @@ class AddPhoto extends Component{
 	render () {
 		return(
 			<div className="container">
-				<div className="container-fluid">
 					<div className=" row">
 						<NavbarHome/>
-        				<hr/>
-						<TitleHome/>
         				<br/>
 						<Photos/>
 					</div>
-				</div>
 			</div>
 		);
 	};

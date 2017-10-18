@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import {
-	BrowserRouter,
-	Route,
-	Switch,
-	NavLink,
-	Redirect
+	NavLink
 	
 } from "react-router-dom";
 import Utils from "./Utils.js";
 import './SignUp.css';
+
 class SignUp extends Component {
 	constructor(props,context) {
 		super(props,context);
@@ -23,35 +20,23 @@ class SignUp extends Component {
 		formsName(e) {
 		this.inputName = e.target.value;
 
-		// let patron = /[^a-zA-Z -]|( )|(--)|(^s*$)/;
-		// 	if(patron.test(this.inputName)) {
-		// 		alert('no es correcta')
-
-		// 	}else alert( 'es correcta')
-
 	}
 	formsEmail(e) {
 		this.inputEmail = e.target.value;
-		// if(this.inputEmail = '') {
-
-		// }
-		// model.userInfo.email = this.inputEmail
-
 	}
 	formsPassword(e) {
 		this.inputpassword = e.target.value;
 	}
 	render() {
-		const { model } = this.props;
 		const onInputChange = e => {
 			this.setState({
 				goFordward: e.target.checked
 			});
+			
 		};
-		const prueba = () => {
-			model.userInfo.email = this.inputEmail
-			model.userInfo.name = this.inputName
-			model.userInfo.password = this.inputpassword
+		const saveInfo = () => {
+			this.props.info.email = this.inputEmail
+			this.props.info.user = this.inputName
 		}
 		const validation = e => {
 			this.setState = {
@@ -73,14 +58,17 @@ class SignUp extends Component {
 							</a>
 							</div>
 							<div className="col-md-10 col-xs-10 text-center">
-							<h1>Iniciar sesión</h1>
+							<h1 className="titleCar">Iniciar sesión</h1>
 							</div>
 						</div>
 						</div>
-					</header>
+					</header><br/><br/>
 					<form
 						className="">
+<<<<<<< HEAD
 												<br />
+=======
+>>>>>>> 07d5097cdb95f44f707a33dc25e0cda31a618053
 						<div className="input-group">
 							<span className="input-group-addon">
 								<i className="glyphicon glyphicon-envelope" />
@@ -91,7 +79,8 @@ class SignUp extends Component {
 								name="email"
 								placeholder="Correo"
 								onChange={e => (this.formsEmail(e))}
-							required/>
+								required
+							/>
 						</div>
 						<br />
 						<div className="input-group">
@@ -99,12 +88,19 @@ class SignUp extends Component {
 							<i className="fa fa-unlock" aria-hidden="true"></i>
 							</span>
 							<input type="password" 
-							className="form-control" 
-							id="exampleInputPassword1" 
-							placeholder="Contraseña" required/>
+							className="form-control"
+							 id="exampleInputPassword1" 
+							 placeholder="Password" required/>
 						</div>
 						<div />
 						<br />
+						<a className=" btn-block btn-social btn-facebook">
+						<i className="fa fa-facebook"></i> Ingresar con Facebook
+						</a>
+						<a className=" btn-block btn-social btn-google-plus">
+						<i className="fa fa-google-plus"></i> Ingresar con Google
+						</a><br/>
+
 						<label className="form-check-label">
 							<input
 								className="form-check-input"
@@ -114,13 +110,12 @@ class SignUp extends Component {
 							/>
 							Recuerdame 
 							<br />
-						<a href="lyft.com"> Terminos & Servicios</a>
 						</label>
 
 		 <br />
 						{this.state.goFordward ? (
 							<NavLink
-								onClick={prueba}
+								onClick={saveInfo}
 								to={"/map"}
 								className="btn btn-lg btn-block btn-lyft"
 							>

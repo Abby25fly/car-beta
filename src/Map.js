@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom'
 
 
-const Map = ({ model }) => {
+const Map = ({ model,info }) => {
 
   const state = {
     properties: model.properties,
@@ -60,6 +60,7 @@ const Map = ({ model }) => {
 
     <GoogleMaps
       model={model}
+      info ={info}
       properties={properties}
       activeProperty={activeProperty}
       setActiveProperty={setActiveProperty}
