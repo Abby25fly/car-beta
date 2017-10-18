@@ -5,29 +5,28 @@ import './Abstract.css';
 class Abstract extends React.Component{
     constructor(props){
         super(props);
-        console.log(this.props.info)
     }
     showTypeDamage()
     {
         let str = ""
         switch(this.props.info.typeDamage){
-            case 1:
+            case 0:
                 str = "Desbarranco"
                 break;
-            case 2:
+            case 1:
                 str =  "Se averió"
                 break;
-            case 3:
+            case 2:
                 str =  "Choque provocado por el conductor"
                 break;
-            case 4:
+            case 3:
                 str = "Choque frontal"
                 break;
-            case 5:
+            case 4:
                 str =  "Volcadura"
                 break;
-            case 6:
-                str = "Daños a/de terceros"
+            case 5:
+                str = "Robo de vehículo"
                 break;
         }
         return str;
@@ -63,12 +62,17 @@ class Abstract extends React.Component{
 
                     </div>
                     <br/>
-                    <b>Usuario:</b><br/><span>{this.props.info.user}</span><br/>
                     <b>Email:</b><br/><span>{this.props.info.email}</span><br/>
-                    <b>Ubicación del Accidente:</b><br/><span>{this.props.info.location}</span><br/>
+                    <b>Ubicación del suceso:</b><br/><span>{this.props.info.location}</span><br/>
                     <b>Tipo de daño:</b><br/><span>{this.showTypeDamage()}</span><br/>
-                    <b>Descripción del accidente:</b><br/><span>{this.props.info.description}</span><br/>
-                    <b>Partes dañadas:</b><br/><span>{this.showDamagedParts()}</span><br/>
+                    <b>Descripción del suceso:</b><br/><span>{this.props.info.description}</span><br/>
+                    {
+                        this.props.info.damagedParts.length
+                        ?
+                        <div><b>Partes dañadas:</b><br/><span>{this.showDamagedParts()}</span><br/></div>
+                        :
+                        <div></div>
+                    }
                     <div className='row'>
                         <div className='col-xs-12'><NavLink className='btn btn-block' to={'/results'}>Enviar</NavLink></div><br/><br/>
                         <div className='col-xs-12'><NavLink className='btn btn-block' to={'/map'}>Cancelar</NavLink></div>

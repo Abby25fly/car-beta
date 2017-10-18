@@ -13,7 +13,8 @@ class SignUp extends Component {
 		this.inputEmail = undefined;
 		this.inputpassword = undefined;
 		this.state = {
-			goFordward: false,
+			goFordwardInp: false,
+			goFordwardPass: false,
 			complete: false
 		};
 	}
@@ -23,17 +24,32 @@ class SignUp extends Component {
 	}
 	formsEmail(e) {
 		this.inputEmail = e.target.value;
+		if(this.inputEmail.indexOf('@')!=-1 && this.inputEmail.indexOf('.')!=-1){
+			this.setState({
+				goFordwardInp: true
+			});
+		}
+		else
+			this.setState({
+				goFordwardInp:false
+			});
+
+		console.log("inp",this.state.goFordwardInp);
 	}
 	formsPassword(e) {
 		this.inputpassword = e.target.value;
+		if((this.inputpassword).length > 6){
+			this.setState({
+				goFordwardPass: true
+			});
+		}
+		else
+		this.setState({
+			goFordwardPass:false
+		});
+		console.log("pass ",this.state.goFordwardPass);
 	}
 	render() {
-		const onInputChange = e => {
-			this.setState({
-				goFordward: e.target.checked
-			});
-			
-		};
 		const saveInfo = () => {
 			this.props.info.email = this.inputEmail
 			this.props.info.user = this.inputName
@@ -83,7 +99,7 @@ class SignUp extends Component {
 							<span className="input-group-addon">
 							<i className="fa fa-unlock" aria-hidden="true"></i>
 							</span>
-							<input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" required/>
+							<input type="password" onChange={e => (this.formsPassword(e))} className="form-control" id="exampleInputPassword1" placeholder="Password" required/>
 						</div>
 						<div />
 						<br />
@@ -99,24 +115,23 @@ class SignUp extends Component {
 								className="form-check-input"
 								id="agreeUser"
 								type="checkbox"
-								onChange={onInputChange}
 							/>
 							Recuerdame 
 							<br />
 						</label>
 
 		 <br />
-						{this.state.goFordward ? (
+						{this.state.goFordwardInp && this.state.goFordwardPass ? (
 							<NavLink
 								onClick={saveInfo}
 								to={"/map"}
 								className="btn btn-lg btn-block btn-lyft"
 							>
-								Next
+								Siguiente
               </NavLink>
 						) : (
 								<button className="btn btn-lg btn-block btn-lyft disabled">
-									Next
+									Siguiente
               </button>
 							)}
 					</form>
