@@ -65,10 +65,6 @@ class SignUp extends Component {
 					</header><br/><br/>
 					<form
 						className="">
-<<<<<<< HEAD
-												<br />
-=======
->>>>>>> 07d5097cdb95f44f707a33dc25e0cda31a618053
 						<div className="input-group">
 							<span className="input-group-addon">
 								<i className="glyphicon glyphicon-envelope" />
@@ -77,7 +73,7 @@ class SignUp extends Component {
 								type="email"
 								className="form-control"
 								name="email"
-								placeholder="Correo"
+								placeholder="Ingrese Correo"
 								onChange={e => (this.formsEmail(e))}
 								required
 							/>
@@ -90,7 +86,7 @@ class SignUp extends Component {
 							<input type="password" 
 							className="form-control"
 							 id="exampleInputPassword1" 
-							 placeholder="Password" required/>
+							 placeholder="Ingrese contraseña" required/>
 						</div>
 						<div />
 						<br />
@@ -119,11 +115,11 @@ class SignUp extends Component {
 								to={"/map"}
 								className="btn btn-lg btn-block btn-lyft"
 							>
-								Next
+								Siguiente
               </NavLink>
 						) : (
 								<button className="btn btn-lg btn-block btn-lyft disabled">
-									Next
+									Siguiente
               </button>
 							)}
 					</form>
