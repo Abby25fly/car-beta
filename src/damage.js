@@ -93,7 +93,7 @@ class Images extends Component {
         <div className='row text-center'>
               <div className={'col-xs-4 image '+this.state.cuatro} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cuatro" src={cuatro}/></div>
               <div className={'col-xs-4 image '+this.state.cinco} onClick={(e)=>this.select(e)}><img className="img-responsive" id="cinco" src={cinco}/></div>
-              <div className={'col-xs-4 image '+this.state.seis} onClick={(e)=>this.select(e)}></div>              
+              <div className={'col-xs-4 image '+this.state.seis} onClick={(e)=>this.select(e)}><img className="img-responsive" id="seis" src={seis}/></div>              
         </div>
         </div>
         <div className="form-group textarea">
